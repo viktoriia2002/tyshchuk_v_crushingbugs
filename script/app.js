@@ -7,11 +7,11 @@
 				gameBoard = document.querySelector('.puzzle-board');
 				zonePieces = document.querySelector('.puzzle-pieces');
 
- let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
+ const piecesNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
 	function changeImageSet() {
 
-		imageNames.forEach((piece, index)=> {
+		piecesNames.forEach((piece, index)=> {
 			puzzlePieces[index].src = `images/${piece + this.dataset.bgkey}.jpg`;
 		});
 
@@ -30,7 +30,7 @@
 
 	function allowDrop(event) {
 
-		if (this.children.length >=1){
+		if (this.children.length >= 1){
 
 			return;
 		}
@@ -39,16 +39,12 @@
 		event.target.appendChild(document.querySelector(`#${droppedImage}`));
 	}
 
-	function resetPuzzle(){
-		for (let loop=0; loop < puzzlePieces.length; loop=loop+1){
-			zonePieces.appendChild(puzzlePieces[loop]);
-		}
-	}
+
 
 	puzzleButtons.forEach(button =>
 {
 			button.addEventListener('click', changeImageSet);
-			button.addEventListener('click', resetPuzzle);
+		
 
 	});
 	puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
