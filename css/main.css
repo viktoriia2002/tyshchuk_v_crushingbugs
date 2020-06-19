@@ -47,12 +47,12 @@ body {
 	width: auto;
 }
 
-.tl , .bl {
-	text-align: right;
+.br img, .bl img {
+	top: 0;
 }
-
-.br img, .bl img {top: 0;}
-.tl img, .bl img{ right: 0;}
+.tl img, .bl img{
+	right: 0;
+}
 
 
 
