@@ -1,5 +1,6 @@
 # Funny puzzle game for everybody!!!
 
+
 # Description
 This game was created to provide entertainment for people who don't know what to do during quarantine. In this game you can freely add 5 wonderful pictures with different landscapes. To do this you just need to show a little wit and your picture is in your hands.
 
