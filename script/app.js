@@ -39,6 +39,15 @@
 		event.target.appendChild(document.querySelector(`#${droppedImage}`));
 	}
 
+
+
+
+	puzzleButtons.forEach(button =>
+{
+			button.addEventListener('click', changeImageSet);
+		
+
+
 	function resetPuzzle(){
 		for (let loop = 0; loop < puzzlePieces.length; loop = loop + 1){
 			zonePieces.appendChild(puzzlePieces[loop]);
@@ -49,6 +58,7 @@
 {
 			button.addEventListener('click', changeImageSet);
 			button.addEventListener('click', resetPuzzle);
+
 
 	});
 	puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
